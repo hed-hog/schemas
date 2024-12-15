@@ -18,6 +18,11 @@ const ITENS: ItemType[] = [
     interfaceName: 'Hedhog',
     interfaceTsFile: './src/interfaces/Hedhog.ts',
   },
+  {
+    finalFileName: 'beta.schema.json',
+    interfaceName: 'Beta',
+    interfaceTsFile: './src/interfaces/Beta.ts',
+  },
 ];
 
 if (!INTERFACES_PATH.every((file) => existsSync(file))) {
