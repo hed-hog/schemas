@@ -49,7 +49,9 @@ To enable schema validation in Visual Studio Code, add the following configurati
 ```json
 {
   "yaml.schemas": {
-    "https://raw.githubusercontent.com/hed-hog/schemas/refs/heads/main/schemas/hedhog.schema.json": ["hedhog.yaml"]
+    "https://raw.githubusercontent.com/hed-hog/schemas/refs/heads/main/schemas/hedhog.schema.json": [
+      "hedhog.yaml"
+    ]
   },
   "yaml.validate": true,
   "yaml.format.enable": true,

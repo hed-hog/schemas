@@ -6,7 +6,7 @@
     "source.removeUnusedImports": "explicit"
   },
   "yaml.schemas": {
-    "./schemas/hedhog.schema.json": ["hedhog.yaml"],
+    "./schemas/hedhog.schema.json": ["hedhog.yaml"]
   },
   "yaml.validate": true,
   "yaml.format.enable": true,

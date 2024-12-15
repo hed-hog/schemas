@@ -4,7 +4,9 @@
   "description": "To use the Hedhog schemas in your project, follow these steps:",
   "main": "./dist/index.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "format": "prettier --write .",
+    "diff": "git diff --output diff.txt"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,13 @@
   "homepage": "https://github.com/hed-hog/schemas#readme",
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "nodemon": "^3.1.9",
+    "prettier": "^3.4.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "typescript-json-schema": "^0.65.1"

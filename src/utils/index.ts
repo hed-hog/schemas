@@ -1,19 +1,8 @@
-// ./utils/index.ts
-import { CompilerOptions, PartialArgs } from "typescript-json-schema";
-
-export const compilerOptions: CompilerOptions = {
-    strictNullChecks: true,
-    additionalProperties: true,
-};
-
-export const settings: PartialArgs = {
-    required: false,
-    aliasRef: false,
-    titles: true,
-    noExtraProps: true,
-};
-
+/**
+ * Initializes the generation process by clearing the console and printing a
+ * message indicating that the schemas are being generated.
+ */
 export const init = () => {
-    process.stdout.write("\x1Bc");
-    console.log("\n\nGenerating schemas...\n");
+  process.stdout.write('\x1Bc');
+  console.log('\n\nGenerating schemas...\n');
 };
