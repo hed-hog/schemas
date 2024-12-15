@@ -8,7 +8,7 @@ import { compilerOptions, settings } from "./utils";
 
 const ITENS: ItemType[] = [
     {
-        finalFileName: "beta.schema.json",
+        finalFileName: "hedhog.schema.json",
         interfaceName: "Hedhog",
         interfaceTsFile: "./src/interfaces/Hedhog.ts"
     },

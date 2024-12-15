@@ -7,5 +7,8 @@ export const compilerOptions: CompilerOptions = {
 };
 
 export const settings: PartialArgs = {
-    required: true,
+    required: false,
+    aliasRef: false,
+    titles: true,
+    noExtraProps: true,
 };

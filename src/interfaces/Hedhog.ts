@@ -1,43 +1,29 @@
-interface Screens {
-	person: {
-		title: {
-			en: string;
-		};
-		menu: {
-			url: string;
-			icon: string;
-			name: {
-				en: string;
-				pt: string;
-			};
-			slug: string;
-			relations: {
-				role: {
-					where: { slug: string; };
-				}[];
-			};
-		};
-	};
-}
+import { Data } from "./Data";
+import { Route } from "./Route";
+import { Screens } from "./Screens";
+import { Tables } from "./Tables";
 
-
-interface Data {
-	[key: string]: {
-		name?: {
-			[key: string]: string;
-		};
-		slug?: string;
-		country_id?: {
-			where: {
-				code: string;
-			};
-		};
-		method?: 'GET' | 'POST' | 'PATCH' | 'DELETE'
-		relations?: any
-	}[];
-}
-
+/**
+ * @description Interface representing the Hedhog configuration.
+ */
 export interface Hedhog {
-	screens?: Screens,
-	data?: Data
+	/**
+	 * @description Optional screens configuration.
+	 */
+	screens?: Screens;
+
+	/**
+	 * @description Optional data configuration.
+	 */
+	data?: Data;
+
+	/**
+	 * @description Optional tables configuration.
+	 */
+	tables?: Tables;
+
+	/**
+	 * @description Optional routes configuration.
+	 */
+	routes?: Route[];
 }

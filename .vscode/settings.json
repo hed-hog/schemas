@@ -7,7 +7,6 @@
   },
   "yaml.schemas": {
     "./schemas/hedhog.schema.json": ["hedhog.yaml"],
-    "./schemas/beta.schema.json": ["beta-hedhog.yaml"]
   },
   "yaml.validate": true,
   "yaml.format.enable": true,
