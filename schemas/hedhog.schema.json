@@ -199,12 +199,7 @@
             },
             "method": {
               "description": "Screen method",
-              "enum": [
-                "DELETE",
-                "GET",
-                "PATCH",
-                "POST"
-              ],
+              "enum": ["DELETE", "GET", "PATCH", "POST"],
               "type": "string",
               "title": "method"
             },
@@ -997,11 +992,7 @@
                 },
                 "default": {
                   "description": "Default value for the column.",
-                  "type": [
-                    "string",
-                    "number",
-                    "boolean"
-                  ],
+                  "type": ["string", "number", "boolean"],
                   "title": "default"
                 },
                 "referencedDatabase": {
@@ -1033,10 +1024,7 @@
                 },
                 "generationStrategy": {
                   "description": "Strategy for value generation (e.g., 'uuid', 'increment').",
-                  "enum": [
-                    "increment",
-                    "uuid"
-                  ],
+                  "enum": ["increment", "uuid"],
                   "type": "string",
                   "title": "generationStrategy"
                 },
@@ -1083,10 +1071,7 @@
                 },
                 "precision": {
                   "description": "Precision for numeric or decimal types.",
-                  "type": [
-                    "null",
-                    "number"
-                  ],
+                  "type": ["null", "number"],
                   "title": "precision"
                 },
                 "scale": {
@@ -1121,10 +1106,7 @@
                 },
                 "generatedType": {
                   "description": "Type of generation ('VIRTUAL', 'STORED').",
-                  "enum": [
-                    "STORED",
-                    "VIRTUAL"
-                  ],
+                  "enum": ["STORED", "VIRTUAL"],
                   "type": "string",
                   "title": "generatedType"
                 },
@@ -1174,23 +1156,13 @@
                     },
                     "onDelete": {
                       "description": "Action on delete ('CASCADE', 'SET NULL', etc.).",
-                      "enum": [
-                        "CASCADE",
-                        "NO ACTION",
-                        "RESTRICT",
-                        "SET NULL"
-                      ],
+                      "enum": ["CASCADE", "NO ACTION", "RESTRICT", "SET NULL"],
                       "type": "string",
                       "title": "onDelete"
                     },
                     "onUpdate": {
                       "description": "Action on update ('CASCADE', 'SET NULL', etc.).",
-                      "enum": [
-                        "CASCADE",
-                        "NO ACTION",
-                        "RESTRICT",
-                        "SET NULL"
-                      ],
+                      "enum": ["CASCADE", "NO ACTION", "RESTRICT", "SET NULL"],
                       "type": "string",
                       "title": "onUpdate"
                     }
