@@ -12,3 +12,8 @@ export const settings: PartialArgs = {
     titles: true,
     noExtraProps: true,
 };
+
+export const init = () => {
+    process.stdout.write("\x1Bc");
+    console.log("\n\nGenerating schemas...\n");
+};

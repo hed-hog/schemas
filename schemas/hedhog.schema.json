@@ -212,12 +212,15 @@
               "title": "icon"
             },
             "menu_id": {
+              "description": "Screen menu",
               "type": "object",
               "properties": {
                 "where": {
+                  "description": "Where constraint from menu table",
                   "type": "object",
                   "properties": {
                     "slug": {
+                      "description": "Menu slug",
                       "type": "string",
                       "title": "slug"
                     }

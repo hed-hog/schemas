@@ -1,4 +1,4 @@
-import { ColumnTypes, FieldTypes, GeneratedType, GenerationStrategyType, OnDeleteTypes, OnUpdateTypes } from "../types";
+import { ColumnTypes, FieldTypes, GeneratedType, GenerationStrategyType, OnDeleteTypes, OnUpdateTypes } from "../../types";
 
 export interface Tables {
     [key: string]: {

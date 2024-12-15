@@ -2,9 +2,10 @@ import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { generateSchema, getProgramFromFiles } from "typescript-json-schema";
 import { INTERFACES_PATH, SCHEMA_DIR } from "./constants";
-import './interfaces';
 import { ItemType } from "./types";
-import { compilerOptions, settings } from "./utils";
+import { compilerOptions, init, settings } from "./utils";
+
+init()
 
 const ITENS: ItemType[] = [
     {

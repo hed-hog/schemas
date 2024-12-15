@@ -1,4 +1,4 @@
-import { CountryCodeType, LocaleCodesType, MethodType, RegionType } from "../types";
+import { CountryCodeType, LocaleCodesType, MethodType, RegionType } from "../../types";
 
 interface IName {
     [key: string]: string
@@ -45,8 +45,19 @@ export interface Data {
          *
          */
         icon?: string;
+
+        /**
+         * @description Screen menu
+         *
+         */
         menu_id?: {
+            /**
+             * @description Where constraint from menu table
+             */
             where: {
+                /**
+                 * @description Menu slug
+                 */
                 slug: string;
             };
         };
