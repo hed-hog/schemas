@@ -2,9 +2,10 @@
 
 ## Quick Start
 
-To use the Hedhog schemas in your project, follow these steps:
+To use the Hedhog schemas in your project...
 
-### Step 1: Clone the Repository
+### Clone the Repository
+
 Clone the Hedhog Schemas repository:
 
 ```bash
@@ -12,7 +13,8 @@ git clone https://github.com/hed-hog/schemas hedhog-schemas
 cd hedhog-schemas
 ```
 
-### Step 2: Add a `hedhog.yaml` File
+### Add a `hedhog.yaml` File
+
 Create a `hedhog.yaml` file in the root of your project:
 
 ```yaml
@@ -32,14 +34,16 @@ tables:
     ifNotExists: true
 ```
 
-### Step 3: Install Dependencies
+### Install Dependencies
+
 Run the following command to install the required libraries:
 
 ```bash
 npm install
 ```
 
-### Step 4: Configure VS Code
+### Configure VS Code
+
 To enable schema validation in Visual Studio Code, add the following configuration to your `settings.json`:
 
 ```json
@@ -54,12 +58,13 @@ To enable schema validation in Visual Studio Code, add the following configurati
 }
 ```
 
-### Step 5: Run the Dev Script
+### Run the Dev Script
+
 Add the following script to your `package.json`:
 
 ```json
 "scripts": {
-  "dev": "tsx watch src/index.ts"
+  "dev": "nodemon"
 }
 ```
 
@@ -69,10 +74,12 @@ Run the dev server with:
 npm run dev
 ```
 
-### Step 6: Validate Your YAML
+### Validate Your YAML
+
 With the schema configured, VS Code will automatically validate your `hedhog.yaml` file and provide helpful suggestions and error checking.
 
 ## Additional Resources
+
 For more details, visit the [Hedhog Documentation](https://hedhog.com/docs/tutorial/getting-started).
 
 Happy coding!
