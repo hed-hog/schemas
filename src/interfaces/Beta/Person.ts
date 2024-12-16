@@ -9,6 +9,7 @@ export interface Person {
    * @minimum 18
    * @maximum 120
    * @default 18
+   * @multipleOf 3
    */
   age?: number;
 

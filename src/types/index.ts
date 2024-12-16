@@ -1,8 +1,35 @@
+export type OnDeleteTypes = 'CASCADE' | 'SET NULL' | 'NO ACTION' | 'RESTRICT';
+
+export type OnUpdateTypes = 'CASCADE' | 'SET NULL' | 'NO ACTION' | 'RESTRICT';
+
+export type GenerationStrategyType = 'uuid' | 'increment';
+
+export type GeneratedType = 'VIRTUAL' | 'STORED';
+
+export type MethodType = 'GET' | 'POST' | 'PATCH' | 'DELETE' | 'PUT';
+
 export interface ItemType {
   finalFileName: string;
   interfaceName: string;
   interfaceTsFile: string;
 }
+
+export type FieldTypes =
+  | 'richtext'
+  | 'color'
+  | 'text'
+  | 'file'
+  | 'password'
+  | 'radio'
+  | 'checkbox'
+  | 'range'
+  | 'select'
+  | 'combobox'
+  | 'multiselect'
+  | 'datepicker'
+  | 'sheetpicker'
+  | 'switch'
+  | 'switchlist';
 
 export type ColumnTypes =
   | 'pk'
@@ -70,33 +97,6 @@ export type ColumnTypes =
   | 'cube'
   | 'ltree'
   | 'enum';
-
-export type OnDeleteTypes = 'CASCADE' | 'SET NULL' | 'NO ACTION' | 'RESTRICT';
-
-export type OnUpdateTypes = 'CASCADE' | 'SET NULL' | 'NO ACTION' | 'RESTRICT';
-
-export type FieldTypes =
-  | 'richtext'
-  | 'color'
-  | 'text'
-  | 'file'
-  | 'password'
-  | 'radio'
-  | 'checkbox'
-  | 'range'
-  | 'select'
-  | 'combobox'
-  | 'multiselect'
-  | 'datepicker'
-  | 'sheetpicker'
-  | 'switch'
-  | 'switchlist';
-
-export type GenerationStrategyType = 'uuid' | 'increment';
-
-export type GeneratedType = 'VIRTUAL' | 'STORED';
-
-export type MethodType = 'GET' | 'POST' | 'PATCH' | 'DELETE';
 
 export type CountryCodeType =
   | 'AFG'

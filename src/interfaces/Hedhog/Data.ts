@@ -5,83 +5,97 @@ import {
   RegionType,
 } from '../../types';
 
+/**
+ * @minItems 1
+ */
 interface IName {
   [key: string]: string;
 }
 
-export interface Data {
-  [key: string]: {
-    /**
-     * @description laguage and value. Ex: en: Person
-     */
-    name?: IName | string;
+interface IUser {
+  name: string;
+  email: string;
+  password: {
+    hash: string;
+  };
+}
 
-    /**
-     * @description Screen slug
-     */
-    slug?: string;
+interface IDefaultData {
+  /**
+   * @description laguage and value. Ex: en: Person
+   */
+  name?: IName | IName[] | string;
 
-    country_id?: {
-      where: {
-        code: string;
-      };
+  /**
+   * @description Screen slug
+   */
+  slug?: string;
+
+  country_id?: {
+    where: {
+      code: string;
     };
+  };
 
-    /**
-     * @description Screen method
-     *
-     */
-    method?: MethodType;
+  /**
+   * @description Screen method
+   *
+   */
+  method?: MethodType;
 
-    /**
-     * @description Screen relations
-     *
-     */
-    relations?: any;
+  /**
+   * @description Screen relations
+   *
+   */
+  relations?: any;
 
-    /**
-     * @description Screen url
-     *
-     */
-    url?: string;
+  /**
+   * @description Screen url
+   *
+   */
+  url?: string;
 
-    /**
-     * @description Screen icon
-     *
-     */
-    icon?: string;
+  /**
+   * @description Screen icon
+   *
+   */
+  icon?: string;
 
+  /**
+   * @description Screen menu
+   *
+   */
+  menu_id?: {
     /**
-     * @description Screen menu
-     *
+     * @description Where constraint from menu table
      */
-    menu_id?: {
+    where: {
       /**
-       * @description Where constraint from menu table
+       * @description Menu slug
        */
-      where: {
-        /**
-         * @description Menu slug
-         */
-        slug: string;
-      };
+      slug: string;
     };
+  };
 
-    /**
-     * @description Screen description
-     */
-    description?: {
-      [key: string]: string;
-    };
+  /**
+   * @description Screen description
+   * @minItems 1
+   */
+  description?: {
+    [key: string]: string;
+  };
 
-    /**
-     * @description Screen code
-     */
-    code?: CountryCodeType | LocaleCodesType;
+  /**
+   * @description Screen code
+   */
+  code?: CountryCodeType | LocaleCodesType;
 
-    /**
-     * @description Screen region
-     */
-    region?: RegionType;
-  }[];
+  /**
+   * @description Screen region
+   */
+  region?: RegionType;
+}
+
+export interface Data {
+  [key: string]: IDefaultData[] | IUser[];
 }

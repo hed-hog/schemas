@@ -85,3 +85,93 @@ With the schema configured, VS Code will automatically validate your `hedhog.yam
 For more details, visit the [Hedhog Documentation](https://hedhog.com/docs/tutorial/getting-started).
 
 Happy coding!
+
+# `jsDoc` definitions
+
+## `@description`
+
+> Define the description for the property.
+
+```ts
+/**
+ * @description Interface representing the Beta configuration.
+ */
+export interface Beta {
+  // ...
+}
+```
+
+## @default`
+
+> Define the default value for the property.
+
+```ts
+/**
+ * @default 10
+ */
+varchar?: number;
+```
+
+## `@minimum`
+
+> Define the minimum value for the property.
+
+```ts
+/**
+ * @minimum 18
+ */
+age?: number;
+```
+
+## `@maximum`
+
+> Define the maximum value for the property.
+
+```ts
+/**
+ * @maximum 10
+ */
+age?: number;
+```
+
+## `@minItems`
+
+> Define the minimum number of items in the array.
+
+```ts
+/**
+ * @description Interface representing the Beta configuration.
+ * @minItems 2
+ */
+persons: [];
+```
+
+## `@maxItems`
+
+> Define the maximum number of items in the array.
+
+```ts
+/**
+ * @maxItems 2
+ */
+persons: [];
+```
+
+## `@multipleOf`
+
+> Define the multiple of value for the property.
+
+```ts
+/**
+ * @multipleOf 10
+ */
+age?: number;
+```
+
+### Examples
+
+```yaml
+person:
+  name: Saulo Costa
+  age: 30
+```

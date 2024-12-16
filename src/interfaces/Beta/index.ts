@@ -11,7 +11,6 @@ export interface Beta {
   /**
    * @description Country array
    * @minItems 3
-   * @errorMessage You must have at least 3 countries
    */
   countries?: Country[];
 }

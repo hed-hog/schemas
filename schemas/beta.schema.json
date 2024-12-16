@@ -37,6 +37,7 @@
           "minimum": 18,
           "maximum": 120,
           "default": 18,
+          "multipleOf": 3,
           "type": "number",
           "title": "age"
         }
