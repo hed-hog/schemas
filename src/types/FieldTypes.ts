@@ -1,0 +1,16 @@
+export type FieldTypes =
+  | 'richtext'
+  | 'color'
+  | 'text'
+  | 'file'
+  | 'password'
+  | 'radio'
+  | 'checkbox'
+  | 'range'
+  | 'select'
+  | 'combobox'
+  | 'multiselect'
+  | 'datepicker'
+  | 'sheetpicker'
+  | 'switch'
+  | 'switchlist';

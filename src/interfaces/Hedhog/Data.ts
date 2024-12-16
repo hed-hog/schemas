@@ -3,6 +3,8 @@ import {
   LocaleCodesType,
   MethodType,
   RegionType,
+  TablerIconsFilled,
+  TablerIconsOutline,
 } from '../../types';
 
 /**
@@ -56,10 +58,9 @@ interface IDefaultData {
   url?: string;
 
   /**
-   * @description Screen icon
-   *
+   * @description Screen icon. Name of the icon from https://tabler.io/icons
    */
-  icon?: string;
+  icon?: TablerIconsFilled | TablerIconsOutline;
 
   /**
    * @description Screen menu

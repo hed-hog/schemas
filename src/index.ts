@@ -4,6 +4,7 @@ import { generateSchema, getProgramFromFiles } from 'typescript-json-schema';
 import {
   COMPILER_OPTIONS,
   INTERFACES_PATH,
+  JSON_INDENT_TABS,
   SCHEMA_DIR,
   SETTINGS,
 } from './constants';
@@ -49,7 +50,11 @@ ITENS.forEach((item: ItemType) => {
 
   try {
     mkdirSync(dirname(outputPath), { recursive: true });
-    writeFileSync(outputPath, JSON.stringify(schema, null, 2), 'utf-8');
+    writeFileSync(
+      outputPath,
+      JSON.stringify(schema, null, JSON_INDENT_TABS),
+      'utf-8',
+    );
     console.log(`Schema saved to ${outputPath}`);
   } catch (error) {
     console.error(`Failed to save schema to ${outputPath}:`, error);

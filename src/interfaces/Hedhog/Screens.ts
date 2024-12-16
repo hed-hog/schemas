@@ -1,3 +1,5 @@
+import { TablerIconsFilled, TablerIconsOutline } from '../../types';
+
 export interface Screens {
   [key: string]: {
     /**
@@ -19,9 +21,9 @@ export interface Screens {
       url: string;
 
       /**
-       * @description Screen icon
+       * @description Screen icon. Name of the icon from https://tabler.io/icons
        */
-      icon: string;
+      icon?: TablerIconsFilled | TablerIconsOutline;
 
       /**
        * @description Screen name in different languages

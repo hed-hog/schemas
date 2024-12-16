@@ -4,6 +4,7 @@ import { CompilerOptions, PartialArgs } from 'typescript-json-schema';
 
 export const INTERFACES_PATH = glob.sync('./src/interfaces/**/*.ts');
 export const SCHEMA_DIR = resolve(__dirname, '..', '..', 'schemas');
+export const JSON_INDENT_TABS = 0;
 
 export const SETTINGS: PartialArgs = {
   required: true, // required properties

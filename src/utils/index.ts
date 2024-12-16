@@ -1,8 +1,10 @@
 /**
- * Initializes the generation process by clearing the console and printing a
- * message indicating that the schemas are being generated.
+ * Logs a message to the console indicating that the script is generating
+ * schemas.
+ *
+ * This is useful for debugging purposes, as it lets the user know that the
+ * script is running without errors.
  */
 export const init = () => {
-  process.stdout.write('\x1Bc');
-  console.log('\n\nGenerating schemas...\n');
+  console.log('\n\n#############################\n\nGenerating schemas...\n');
 };
