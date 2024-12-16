@@ -1,7 +1,7 @@
 {
   "name": "hedhog-schemas",
   "version": "1.0.0",
-  "description": "To use the Hedhog schemas in your project, follow these steps:",
+  "description": "To use the Hedhog schemas in your project!",
   "main": "./dist/index.js",
   "scripts": {
     "dev": "nodemon",
