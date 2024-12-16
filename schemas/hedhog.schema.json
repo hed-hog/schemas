@@ -59,17 +59,9 @@
               "name": {
                 "description": "Screen name in different languages",
                 "type": "object",
-                "properties": {
-                  "en": {
-                    "type": "string",
-                    "title": "en"
-                  },
-                  "pt": {
-                    "type": "string",
-                    "title": "pt"
-                  }
+                "additionalProperties": {
+                  "type": "string"
                 },
-                "additionalProperties": false,
                 "title": "name"
               },
               "slug": {
@@ -95,15 +87,24 @@
                             }
                           },
                           "additionalProperties": false,
+                          "required": [
+                            "slug"
+                          ],
                           "title": "where"
                         }
                       },
-                      "additionalProperties": false
+                      "additionalProperties": false,
+                      "required": [
+                        "where"
+                      ]
                     },
                     "title": "role"
                   }
                 },
                 "additionalProperties": false,
+                "required": [
+                  "role"
+                ],
                 "title": "relations"
               },
               "menu_id": {
@@ -121,14 +122,28 @@
                       }
                     },
                     "additionalProperties": false,
+                    "required": [
+                      "slug"
+                    ],
                     "title": "where"
                   }
                 },
                 "additionalProperties": false,
+                "required": [
+                  "where"
+                ],
                 "title": "menu_id"
               }
             },
             "additionalProperties": false,
+            "required": [
+              "icon",
+              "menu_id",
+              "name",
+              "relations",
+              "slug",
+              "url"
+            ],
             "title": "menu"
           },
           "relations": {
@@ -146,12 +161,20 @@
                   "title": "title"
                 }
               },
-              "additionalProperties": false
+              "additionalProperties": false,
+              "required": [
+                "title"
+              ]
             },
             "title": "relations"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "menu",
+          "relations",
+          "title"
+        ]
       }
     },
     "Data": {
@@ -191,15 +214,26 @@
                     }
                   },
                   "additionalProperties": false,
+                  "required": [
+                    "code"
+                  ],
                   "title": "where"
                 }
               },
               "additionalProperties": false,
+              "required": [
+                "where"
+              ],
               "title": "country_id"
             },
             "method": {
               "description": "Screen method",
-              "enum": ["DELETE", "GET", "PATCH", "POST"],
+              "enum": [
+                "DELETE",
+                "GET",
+                "PATCH",
+                "POST"
+              ],
               "type": "string",
               "title": "method"
             },
@@ -232,10 +266,16 @@
                     }
                   },
                   "additionalProperties": false,
+                  "required": [
+                    "slug"
+                  ],
                   "title": "where"
                 }
               },
               "additionalProperties": false,
+              "required": [
+                "where"
+              ],
               "title": "menu_id"
             },
             "description": {
@@ -884,7 +924,10 @@
               "title": "region"
             }
           },
-          "additionalProperties": false
+          "additionalProperties": false,
+          "required": [
+            "description"
+          ]
         }
       }
     },
@@ -992,7 +1035,11 @@
                 },
                 "default": {
                   "description": "Default value for the column.",
-                  "type": ["string", "number", "boolean"],
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean"
+                  ],
                   "title": "default"
                 },
                 "referencedDatabase": {
@@ -1024,7 +1071,10 @@
                 },
                 "generationStrategy": {
                   "description": "Strategy for value generation (e.g., 'uuid', 'increment').",
-                  "enum": ["increment", "uuid"],
+                  "enum": [
+                    "increment",
+                    "uuid"
+                  ],
                   "type": "string",
                   "title": "generationStrategy"
                 },
@@ -1071,7 +1121,10 @@
                 },
                 "precision": {
                   "description": "Precision for numeric or decimal types.",
-                  "type": ["null", "number"],
+                  "type": [
+                    "null",
+                    "number"
+                  ],
                   "title": "precision"
                 },
                 "scale": {
@@ -1106,7 +1159,10 @@
                 },
                 "generatedType": {
                   "description": "Type of generation ('VIRTUAL', 'STORED').",
-                  "enum": ["STORED", "VIRTUAL"],
+                  "enum": [
+                    "STORED",
+                    "VIRTUAL"
+                  ],
                   "type": "string",
                   "title": "generatedType"
                 },
@@ -1156,22 +1212,39 @@
                     },
                     "onDelete": {
                       "description": "Action on delete ('CASCADE', 'SET NULL', etc.).",
-                      "enum": ["CASCADE", "NO ACTION", "RESTRICT", "SET NULL"],
+                      "enum": [
+                        "CASCADE",
+                        "NO ACTION",
+                        "RESTRICT",
+                        "SET NULL"
+                      ],
                       "type": "string",
                       "title": "onDelete"
                     },
                     "onUpdate": {
                       "description": "Action on update ('CASCADE', 'SET NULL', etc.).",
-                      "enum": ["CASCADE", "NO ACTION", "RESTRICT", "SET NULL"],
+                      "enum": [
+                        "CASCADE",
+                        "NO ACTION",
+                        "RESTRICT",
+                        "SET NULL"
+                      ],
                       "type": "string",
                       "title": "onUpdate"
                     }
                   },
                   "additionalProperties": false,
+                  "required": [
+                    "column",
+                    "table"
+                  ],
                   "title": "references"
                 }
               },
-              "additionalProperties": false
+              "additionalProperties": false,
+              "required": [
+                "default"
+              ]
             }
           },
           "indices": {
@@ -1193,7 +1266,11 @@
                   "title": "isUnique"
                 }
               },
-              "additionalProperties": false
+              "additionalProperties": false,
+              "required": [
+                "columns",
+                "isUnique"
+              ]
             },
             "title": "indices"
           },
@@ -1204,7 +1281,11 @@
             "title": "ifNotExists"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "required": [
+          "columns",
+          "indices"
+        ]
       }
     },
     "Route": {
@@ -1224,6 +1305,9 @@
             }
           },
           "additionalProperties": false,
+          "required": [
+            "component"
+          ],
           "title": "lazy"
         },
         "children": {
@@ -1234,7 +1318,10 @@
           "title": "children"
         }
       },
-      "additionalProperties": false
+      "additionalProperties": false,
+      "required": [
+        "path"
+      ]
     }
   },
   "$schema": "http://json-schema.org/draft-07/schema#"

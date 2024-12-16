@@ -6,14 +6,14 @@ export const INTERFACES_PATH = glob.sync('./src/interfaces/**/*.ts');
 export const SCHEMA_DIR = resolve(__dirname, '..', '..', 'schemas');
 
 export const SETTINGS: PartialArgs = {
-  required: true,
-  aliasRef: false,
-  titles: true,
-  noExtraProps: true,
+  required: true, // required properties
+  aliasRef: false, // use $ref instead of #/definitions
+  titles: true, // add title to definitions
+  noExtraProps: true, // disallow additional properties
 };
 
 export const COMPILER_OPTIONS: CompilerOptions = {
-  strictNullChecks: true,
-  additionalProperties: true,
-  strict: true,
+  strictNullChecks: true, // allow null and undefined
+  additionalProperties: true, // allow additional properties
+  strict: true, // strict type checking
 };

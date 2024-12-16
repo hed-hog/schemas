@@ -27,8 +27,10 @@ export interface Screens {
        * @description Screen name in different languages
        */
       name: {
-        en: string;
-        pt: string;
+        /**
+         * @description laguage and value. Ex: en: 'Person'
+         */
+        [key: string]: string;
       };
 
       /**
@@ -41,7 +43,9 @@ export interface Screens {
        */
       relations: {
         role: {
-          where: { slug: string };
+          where: {
+            slug: string;
+          };
         }[];
       };
 

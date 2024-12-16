@@ -2,8 +2,22 @@
   "type": "object",
   "properties": {
     "person": {
-      "$ref": "#/definitions/Person",
+      "description": "Person array",
+      "minItems": 2,
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Person"
+      },
       "title": "person"
+    },
+    "countries": {
+      "description": "Country array",
+      "minItems": 3,
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Country"
+      },
+      "title": "countries"
     }
   },
   "additionalProperties": false,
@@ -11,17 +25,37 @@
     "Person": {
       "title": "Person",
       "type": "object",
+      "additionalProperties": {},
+      "properties": {
+        "name": {
+          "description": "Person name",
+          "type": "string",
+          "title": "name"
+        },
+        "age": {
+          "description": "Person age",
+          "minimum": 18,
+          "maximum": 120,
+          "default": 18,
+          "type": "number",
+          "title": "age"
+        }
+      }
+    },
+    "Country": {
+      "title": "Country",
+      "type": "object",
+      "additionalProperties": {},
       "properties": {
         "name": {
           "type": "string",
           "title": "name"
         },
-        "age": {
-          "type": "number",
-          "title": "age"
+        "code": {
+          "type": "string",
+          "title": "code"
         }
-      },
-      "additionalProperties": false
+      }
     }
   },
   "$schema": "http://json-schema.org/draft-07/schema#"
