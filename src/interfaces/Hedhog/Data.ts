@@ -59,6 +59,7 @@ interface IDefaultData {
 
   /**
    * @description Screen icon. Name of the icon from https://tabler.io/icons
+   * @default home
    */
   icon?: TablerIconsFilled | TablerIconsOutline;
 

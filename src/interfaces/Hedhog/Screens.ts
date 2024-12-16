@@ -22,6 +22,7 @@ export interface Screens {
 
       /**
        * @description Screen icon. Name of the icon from https://tabler.io/icons
+       * @default home
        */
       icon?: TablerIconsFilled | TablerIconsOutline;
 
