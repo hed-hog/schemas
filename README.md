@@ -88,15 +88,15 @@ Happy coding!
 
 ---
 
-## `jsDoc` definitions
+## `jsDoc` tricks for generating your schemas
 
-### `@description`
+### jsDoc description
 
 > Define the description for the property.
 
 ```ts
 /**
- * @description Interface representing the Beta configuration.
+ * Interface representing the Beta configuration.
  */
 export interface Beta {
   // ...
@@ -142,7 +142,7 @@ age?: number;
 
 ```ts
 /**
- * @description Interface representing the Beta configuration.
+ * Interface representing the Beta configuration.
  * @minItems 2
  */
 persons: [];

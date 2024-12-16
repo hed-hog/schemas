@@ -4,26 +4,26 @@ import { Screens } from './Screens';
 import { Tables } from './Tables';
 
 /**
- * @description Interface representing the Hedhog configuration.
+ * Interface representing the Hedhog configuration.
  */
 export interface Hedhog {
   /**
-   * @description Optional screens configuration.
+   * Optional screens configuration.
    */
   screens?: Screens;
 
   /**
-   * @description Optional data configuration.
+   * Optional data configuration.
    */
   data?: Data;
 
   /**
-   * @description Optional tables configuration.
+   * Optional tables configuration.
    */
   tables?: Tables;
 
   /**
-   * @description Optional routes configuration.
+   * Optional routes configuration.
    */
   routes?: Route[];
 }

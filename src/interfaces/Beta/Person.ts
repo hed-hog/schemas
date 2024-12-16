@@ -1,11 +1,11 @@
 export interface Person {
   /**
-   * @description Person name
+   * Person name
    */
   name?: string;
 
   /**
-   * @description Person age
+   * Person age
    * @minimum 18
    * @maximum 120
    * @default 18
@@ -14,7 +14,7 @@ export interface Person {
   age?: number;
 
   /**
-   * @description Allowed additional properties
+   * Allowed additional properties
    */
   [key: string]: any;
 }

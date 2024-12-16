@@ -24,12 +24,12 @@ interface IUser {
 
 interface IDefaultData {
   /**
-   * @description laguage and value. Ex: en: Person
+   * laguage and value. Ex: en: Person
    */
   name?: IName | IName[] | string;
 
   /**
-   * @description Screen slug
+   * Screen slug
    */
   slug?: string;
 
@@ -40,47 +40,47 @@ interface IDefaultData {
   };
 
   /**
-   * @description Screen method
+   * Screen method
    *
    */
   method?: MethodType;
 
   /**
-   * @description Screen relations
+   * Screen relations
    *
    */
   relations?: any;
 
   /**
-   * @description Screen url
+   * Screen url
    *
    */
   url?: string;
 
   /**
-   * @description Screen icon. Name of the icon from https://tabler.io/icons
+   * Screen icon. Name of the icon from https://tabler.io/icons
    * @default home
    */
   icon?: TablerIconsFilled | TablerIconsOutline;
 
   /**
-   * @description Screen menu
+   * Screen menu
    *
    */
   menu_id?: {
     /**
-     * @description Where constraint from menu table
+     * Where constraint from menu table
      */
     where: {
       /**
-       * @description Menu slug
+       * Menu slug
        */
       slug: string;
     };
   };
 
   /**
-   * @description Screen description
+   * Screen description
    * @minItems 1
    */
   description?: {
@@ -88,12 +88,12 @@ interface IDefaultData {
   };
 
   /**
-   * @description Screen code
+   * Screen code
    */
   code?: CountryCodeType | LocaleCodesType;
 
   /**
-   * @description Screen region
+   * Screen region
    */
   region?: RegionType;
 }
