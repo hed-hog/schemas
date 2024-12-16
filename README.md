@@ -86,9 +86,11 @@ For more details, visit the [Hedhog Documentation](https://hedhog.com/docs/tutor
 
 Happy coding!
 
-# `jsDoc` definitions
+---
 
-## `@description`
+## `jsDoc` definitions
+
+### `@description`
 
 > Define the description for the property.
 
@@ -101,7 +103,7 @@ export interface Beta {
 }
 ```
 
-## @default`
+### `@default`
 
 > Define the default value for the property.
 
@@ -112,7 +114,7 @@ export interface Beta {
 varchar?: number;
 ```
 
-## `@minimum`
+### `@minimum`
 
 > Define the minimum value for the property.
 
@@ -123,7 +125,7 @@ varchar?: number;
 age?: number;
 ```
 
-## `@maximum`
+### `@maximum`
 
 > Define the maximum value for the property.
 
@@ -134,7 +136,7 @@ age?: number;
 age?: number;
 ```
 
-## `@minItems`
+### `@minItems`
 
 > Define the minimum number of items in the array.
 
@@ -146,7 +148,7 @@ age?: number;
 persons: [];
 ```
 
-## `@maxItems`
+### `@maxItems`
 
 > Define the maximum number of items in the array.
 
@@ -157,7 +159,7 @@ persons: [];
 persons: [];
 ```
 
-## `@multipleOf`
+### `@multipleOf`
 
 > Define the multiple of value for the property.
 
@@ -168,7 +170,7 @@ persons: [];
 age?: number;
 ```
 
-### Examples
+#### Examples
 
 ```yaml
 person:
