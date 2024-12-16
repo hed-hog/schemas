@@ -32,7 +32,7 @@ export interface Tables {
       /**
        * @description Default value for the column.
        */
-      default: number | string | boolean;
+      default?: number | string | boolean;
 
       /**
        * @description Name of the referenced database.
@@ -185,7 +185,7 @@ export interface Tables {
      * @description Whether to create the table only if it does not exist.
      * @default false
      */
-    indices: {
+    indices?: {
       columns: string[];
       isUnique: boolean;
     }[];

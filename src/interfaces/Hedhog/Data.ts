@@ -70,7 +70,7 @@ export interface Data {
     /**
      * @description Screen description
      */
-    description: {
+    description?: {
       [key: string]: string;
     };
 

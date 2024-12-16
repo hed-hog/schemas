@@ -138,9 +138,7 @@
             "additionalProperties": false,
             "required": [
               "icon",
-              "menu_id",
               "name",
-              "relations",
               "slug",
               "url"
             ],
@@ -172,7 +170,6 @@
         "additionalProperties": false,
         "required": [
           "menu",
-          "relations",
           "title"
         ]
       }
@@ -924,10 +921,7 @@
               "title": "region"
             }
           },
-          "additionalProperties": false,
-          "required": [
-            "description"
-          ]
+          "additionalProperties": false
         }
       }
     },
@@ -1241,10 +1235,7 @@
                   "title": "references"
                 }
               },
-              "additionalProperties": false,
-              "required": [
-                "default"
-              ]
+              "additionalProperties": false
             }
           },
           "indices": {
@@ -1283,8 +1274,7 @@
         },
         "additionalProperties": false,
         "required": [
-          "columns",
-          "indices"
+          "columns"
         ]
       }
     },

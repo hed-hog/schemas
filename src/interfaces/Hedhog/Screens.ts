@@ -41,7 +41,7 @@ export interface Screens {
       /**
        * @description Screen relations
        */
-      relations: {
+      relations?: {
         role: {
           where: {
             slug: string;
@@ -52,7 +52,7 @@ export interface Screens {
       /**
        * @description Screen menu id
        */
-      menu_id: {
+      menu_id?: {
         /**
          * @description Where constraint from menu table
          */
@@ -68,7 +68,7 @@ export interface Screens {
     /**
      * @description Screen relations
      */
-    relations: {
+    relations?: {
       [key: string]: {
         /**
          * @description Screen title in different languages
