@@ -2,4 +2,4 @@
 .env
 /dist
 /yaml
-diff.txt
+diff.*
