@@ -13,4 +13,5 @@ export type FieldTypes =
   | 'datepicker'
   | 'sheetpicker'
   | 'switch'
-  | 'switchlist';
+  | 'switchlist'
+  | 'textarea';
