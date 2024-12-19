@@ -1,5 +1,7 @@
 # Hedhog Schemas
 
+> Hedhog schemas are a powerful tool for projects that aim for data validation and dynamic schema-based configurations, with an emphasis on internationalization and support for complex structures.
+
 ## Quick Start
 
 To use the Hedhog schemas in your project...

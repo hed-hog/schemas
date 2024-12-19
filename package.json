@@ -1,7 +1,7 @@
 {
   "name": "hedhog-schemas",
   "version": "1.0.0",
-  "description": "To use the Hedhog schemas in your project!",
+  "description": "Hedhog schemas are a powerful tool for projects that aim for data validation and dynamic schema-based configurations, with an emphasis on internationalization and support for complex structures.",
   "main": "./dist/index.js",
   "scripts": {
     "dev": "nodemon",
