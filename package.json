@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon",
     "format": "prettier --write \"src/**/*.ts\"",
-    "diff": "git diff --output diff.txt"
+    "diff": "git diff --output diff.txt",
+    "project": "sh scripts/get_all_ts.sh . > project.md"
   },
   "repository": {
     "type": "git",

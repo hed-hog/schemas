@@ -2,4 +2,5 @@
 .env
 /dist
 /yaml
-diff.*
+diff.md
+project.md
