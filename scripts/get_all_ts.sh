@@ -26,8 +26,8 @@ fi
 # File title
 echo "# Listing of \`.ts\` files in the project \`$PROJECT_NAME\`"
 
-# List all .ts files in the directory and subdirectories and display their content in Markdown format
-find "$DIR" -type f -name "*.ts" | while read -r FILE; do
+# List all .ts files in the directory and subdirectories, ignoring node_modules
+find "$DIR" \( -type d -name "node_modules" -prune \) -o \( -type f -name "*.ts" \) -print | grep -v "/node_modules/" | while read -r FILE; do
   echo -e "\n## \`$FILE\`\n"
   echo '```ts'
   cat "$FILE"
