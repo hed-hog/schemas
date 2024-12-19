@@ -1,32 +1,32 @@
 #!/bin/bash
 
-# Verifica se o diretório foi passado como argumento
+# Check if the directory was passed as an argument
 if [ "$#" -ne 1 ]; then
-  echo "Uso: $0 <diretório-do-projeto>"
+  echo "Usage: $0 <project-directory>"
   exit 1
 fi
 
-# Define o diretório base
+# Define the base directory
 DIR="$1"
 
-# Verifica se o diretório existe
+# Check if the directory exists
 if [ ! -d "$DIR" ]; then
-  echo "Erro: O diretório '$DIR' não existe."
+  echo "Error: The directory '$DIR' does not exist."
   exit 1
 fi
 
-# Obtém o título do projeto a partir do package.json usando Bash nativo
+# Get the project title from package.json using native Bash
 PACKAGE_JSON="$DIR/package.json"
 if [ -f "$PACKAGE_JSON" ]; then
   PROJECT_NAME=$(grep -oP '"name"\s*:\s*"\K[^"]+' "$PACKAGE_JSON")
 else
-  PROJECT_NAME="Projeto Desconhecido"
+  PROJECT_NAME="Unknown Project"
 fi
 
-# Título do arquivo
-echo "# Listagem de arquivos \`.ts\` do projeto \`$PROJECT_NAME\`"
+# File title
+echo "# Listing of \`.ts\` files in the project \`$PROJECT_NAME\`"
 
-# Lista todos os arquivos .ts no diretório e subdiretórios e exibe seu conteúdo no formato Markdown
+# List all .ts files in the directory and subdirectories and display their content in Markdown format
 find "$DIR" -type f -name "*.ts" | while read -r FILE; do
   echo -e "\n## \`$FILE\`\n"
   echo '```ts'
