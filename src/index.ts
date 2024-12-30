@@ -1,3 +1,4 @@
+import { PathLike } from 'fs';
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { generateSchema, getProgramFromFiles } from 'typescript-json-schema';
@@ -26,7 +27,7 @@ const ITENS: ItemType[] = [
   },
 ];
 
-if (!INTERFACES_PATH.every((file) => existsSync(file))) {
+if (!INTERFACES_PATH.every((file: PathLike) => existsSync(file))) {
   throw new Error(
     'One or more TypeScript files in INTERFACES_PATH do not exist.',
   );

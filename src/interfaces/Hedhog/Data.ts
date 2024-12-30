@@ -98,6 +98,10 @@ interface IDefaultData {
   region?: RegionType;
 }
 
+interface IInsertTablesData {
+  [key: string]: any;
+}
+
 export interface Data {
-  [key: string]: IDefaultData[] | IUser[];
+  [key: string]: IDefaultData[] | IUser[] | IInsertTablesData[];
 }
