@@ -1,4 +1,5 @@
 import { Data } from './Data';
+import { Enums } from './Enums';
 import { Route } from './Route';
 import { Screens } from './Screens';
 import { Tables } from './Tables';
@@ -26,4 +27,9 @@ export interface Hedhog {
    * Optional routes configuration.
    */
   routes?: Route[];
+
+  /**
+   * Optional enums configuration.
+   */
+  enums?: Enums;
 }
